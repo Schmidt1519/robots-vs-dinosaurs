@@ -11,13 +11,13 @@ if __name__ == '__main__':
     weapon2 = Weapon("Sword", 15)
     weapon3 = Weapon("Grenade", 50)
 
-    dino1 = Dinosaur("Stegasaurs", 8)
+    dino1 = Dinosaur("Stegosaurus", 8)
     dino2 = Dinosaur("Raptor", 15)
     dino3 = Dinosaur("T-Rex", 40)
 
-    robot1 = Robot("Tank", weapon1)
+    robot1 = Robot("Megatron", weapon1)
     robot2 = Robot("Buzz", weapon2)
-    robot3 = Robot("Megatron", weapon3)
+    robot3 = Robot("Tank", weapon3)
 
     fleet = Fleet()
     fleet.create_fleet(robot1)
@@ -29,5 +29,6 @@ if __name__ == '__main__':
     herd.create_herd(dino2)
     herd.create_herd(dino3)
 
-    # robot1.attack_dinosaur(dino1)
-    # dino1.attack_robot(robot1)
+    robot1.attack_dinosaur(dino1)
+    dino2.attack_robot(robot2)
+    robot3.attack_dinosaur(dino3)
