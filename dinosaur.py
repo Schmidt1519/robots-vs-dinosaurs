@@ -1,6 +1,3 @@
-import robot
-
-
 class Dinosaur:
     def __init__(self, type, attack_power):
         self.type = type

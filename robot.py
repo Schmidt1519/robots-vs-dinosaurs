@@ -1,12 +1,10 @@
-import dinosaur
-
-
 class Robot:
     def __init__(self, name, Weapon):
         self.name = name
         self.health = 100
         self.power_level = 150
         self.weapon = Weapon
+        self.weapon_choice = ('axe', 'sword', 'grenade', 'machete', 'rifle')
 
 
     def attack_dinosaur(self, dinosaur_to_attack):
