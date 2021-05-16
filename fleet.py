@@ -13,9 +13,9 @@ class Fleet:
 
 
     def create_fleet(self):
-        weapon1 = Weapon("Axe", 10)
-        weapon2 = Weapon("Sword", 15)
-        weapon3 = Weapon("Grenade", 50)
+        weapon1 = Weapon("Axe", 50)
+        weapon2 = Weapon("Sword", 65)
+        weapon3 = Weapon("Grenade", 80)
 
         robot1 = Robot("Megatron", weapon1)
         robot2 = Robot("Buzz", weapon2)

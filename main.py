@@ -11,10 +11,11 @@ if __name__ == '__main__':
 
 
     battlefield = Battlefield()
-    # # # battlefield.Battlefield.run_game()
+    battlefield.run_game()
     # # # battlefield.display_welcome()
-    # # # battlefield.battle()
-    # # battlefield.first_turn()
-    battlefield.show_dino_opponent_options()
-    battlefield.show_robo_opponent_options()
+    # battlefield.battle()
+    # battlefield.first_turn()
+    # battlefield.show_dino_opponent_options()
+    # battlefield.show_robo_opponent_options()
     # battlefield.dino_turn()
+    # battlefield.dino_turn_test()
