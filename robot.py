@@ -4,12 +4,13 @@ class Robot:
         self.health = 100
         self.power_level = 150
         self.weapon = Weapon
-        self.weapon_choice = ('axe', 'sword', 'grenade', 'machete', 'rifle')
+        self.weapon_choice = ('Axe', 'Sword', 'Grenade', 'Machete', 'Rifle')
 
 
     def attack_dinosaur(self, dinosaur_to_attack):
-        print(f'{self.name} attacked {dinosaur_to_attack.type}')
-        self.power_level -= 10
-        dinosaur_to_attack.health -= self.weapon.attack_power
-        print(f'{self.name} power level is now {self.power_level}')
-        print(f'{dinosaur_to_attack.type} health is now {dinosaur_to_attack.health}')
+        if self.power_level > 10:
+            print(f'{self.name} attacked {dinosaur_to_attack.type}')
+            self.power_level -= 10
+            dinosaur_to_attack.health -= self.weapon.attack_power
+            print(f'{self.name} power level is now {self.power_level}')
+            print(f'{dinosaur_to_attack.type} health is now {dinosaur_to_attack.health}')
