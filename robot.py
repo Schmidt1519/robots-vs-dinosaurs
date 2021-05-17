@@ -4,7 +4,7 @@ class Robot:
         self.health = 100
         self.power_level = 150
         self.weapon = Weapon
-        self.weapon_choice = ('Axe', 'Sword', 'Grenade', 'Machete', 'Rifle')
+        self.weapon_choice = ['Knife', 'Machete', 'Spear']
 
 
     def attack_dinosaur(self, dinosaur_to_attack):

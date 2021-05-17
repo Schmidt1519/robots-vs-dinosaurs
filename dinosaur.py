@@ -9,7 +9,21 @@ class Dinosaur:
 
     def attack_robot(self, robot_to_attack):
         if self.energy > 10:
-            print(f'{self.type} attacked {robot_to_attack.name}')
+            while True:
+                try:
+                    attack_choice = int(input(f'Choose attack type: (1) {self.attack_type[0]}, (2) {self.attack_type[1]}, or (3) {self.attack_type[2]}.'))
+                except ValueError:
+                    continue
+                if attack_choice == 1:
+                    print(f'{self.type} attacked {robot_to_attack.name} with {self.attack_type[0]}')
+                    break
+                elif attack_choice == 2:
+                    print(f'{self.type} attacked {robot_to_attack.name} with {self.attack_type[1]}')
+                    break
+                elif attack_choice == 3:
+                    print(f'{self.type} attacked {robot_to_attack.name} with {self.attack_type[2]}')
+                    break
+
             self.energy -= 10
             robot_to_attack.health -= self.attack_power
             print(f'{self.type} energy is now {self.energy}')

@@ -58,6 +58,7 @@ class Battlefield:
         if first_turn == 1:
             while len(self.fleet.robots) > 0 and len(self.herd.dinosaurs) > 0:
                     if self.fleet.robots[0].health > 0 or self.herd.dinosaurs[0].health > 0:
+
                         self.robo_turn()  # First turn team
 
                         if self.herd.dinosaurs[0].health <= 0:
@@ -73,7 +74,6 @@ class Battlefield:
                         elif len(self.herd.dinosaurs) == 0:
                             self.display_winners_robots()
                             return
-
 
                         self.dino_turn()  # Second turn team
 
@@ -95,6 +95,7 @@ class Battlefield:
         elif first_turn == 2:
             while len(self.fleet.robots) > 0 and len(self.herd.dinosaurs) > 0:
                     if self.fleet.robots[0].health > 0 or self.herd.dinosaurs[0].health > 0:
+
                         self.dino_turn()  # First turn team
 
                         if self.herd.dinosaurs[0].health <= 0:
@@ -110,7 +111,6 @@ class Battlefield:
                         elif len(self.herd.dinosaurs) == 0:
                             self.display_winners_robots()
                             return
-
 
                         self.robo_turn()  # Second turn team
 
