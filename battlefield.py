@@ -12,8 +12,8 @@ class Battlefield:
 
 
     def run_game(self):  # master function to call all methods
-        # self.display_welcome()
-        # self.choose_team()
+        self.display_welcome()
+        self.team = self.choose_team()
         self.battle()
 
 
@@ -31,14 +31,11 @@ class Battlefield:
 
     def choose_team(self):
         choose_team = int(input('Choose your team: (1) Robots; (2) Dinosaurs'))
-        # player_team = 0
         if choose_team == 1:
             print('You chose the fleet of Robots')
-            # player_team = 1
             return choose_team
         elif choose_team == 2:
             print('You chose the herd of Dinosaurs')
-            # player_team = 2
             return choose_team
         else:
             print('Invalid answer. Try again.')
@@ -139,15 +136,15 @@ class Battlefield:
         self.fleet.robots[0].attack_dinosaur(self.herd.dinosaurs[0])
 
 
-    def dino_turn_test(self):
-        # if  #all three on both teams still alive... etc for all combos
-
-        dino_selection = input(
-            f'Choose your dinosaur: 1: {self.herd.dinosaurs[0].type}, 2: {self.herd.dinosaurs[1].type}, or 3: {self.herd.dinosaurs[2].type}')
-        robot_attack_selection = input(
-            f'Choose your robot to attack: 1: {self.fleet.robots[0].name}, 2: {self.fleet.robots[1].name}, or 3: {self.fleet.robots[2].name}')
-        if dino_selection == 1 and robot_attack_selection == 1:
-            self.herd.dinosaurs[0].attack_robot(self.fleet.robots[0])
+    # def dino_turn_test(self):
+    #     # if  #all three on both teams still alive... etc for all combos
+    #
+    #     dino_selection = input(
+    #         f'Choose your dinosaur: 1: {self.herd.dinosaurs[0].type}, 2: {self.herd.dinosaurs[1].type}, or 3: {self.herd.dinosaurs[2].type}')
+    #     robot_attack_selection = input(
+    #         f'Choose your robot to attack: 1: {self.fleet.robots[0].name}, 2: {self.fleet.robots[1].name}, or 3: {self.fleet.robots[2].name}')
+    #     if dino_selection == 1 and robot_attack_selection == 1:
+    #         self.herd.dinosaurs[0].attack_robot(self.fleet.robots[0])
 
 
     def show_dino_opponent_options(self):
@@ -164,6 +161,26 @@ class Battlefield:
             i += 1
 
 
+    def display_winners_robots(self):
+        # print('Beep Boop! The Robot fleet has defeated the herd of Dinosaurs win.')
+
+        if self.team == 1:
+            print("Beep Boop! The Robot fleet has defeated the herd of Dinosaurs win. You win!")
+        if self.team == 2:
+            print("Beep Boop! The Robot fleet has defeated the herd of Dinosaurs win. You lose.")
+        # print('Test - Robots win. Display winner message not working')
+
+
+    def display_winners_dinosaurs(self):
+        # print('Rawr! The herd of Dinosaurs has defeated the fleet of Robots.')
+
+        if self.team == 2:
+            print("Rawr! The herd of Dinosaurs has defeated the fleet of Robots. You win!")
+        if self.team == 1:
+            print("Rawr! The herd of Dinosaurs has defeated the fleet of Robots. You lose.")
+        # print('Test - Dinos win. Display winner message not working')
+
+
     # def display_winners(self):
     #     winner_declared = ''
     #     if self.fleet.robots == 0:
@@ -174,23 +191,3 @@ class Battlefield:
     #         print("Beep Boop! Robots win.")
     #         winner_declared == False
     #         return winner_declared
-
-
-    def display_winners_robots(self):
-        print('Beep Boop! The Robot fleet has defeated the herd of Dinosaurs win.')
-
-        # if self.choose_team == 1:
-        #     print("Beep Boop! The Robot fleet has defeated the herd of Dinosaurs win. You win!")
-        # if self.choose_team == 2:
-        #     print("Beep Boop! The Robot fleet has defeated the herd of Dinosaurs win. You lose.")
-        # print('Test. Display winner message not working')
-
-    def display_winners_dinosaurs(self):
-        print('Rawr! The herd of Dinosaurs has defeated the fleet of Robots.')
-
-        # if self.choose_team == 2:
-        #     print("Rawr! The herd of Dinosaurs has defeated the fleet of Robots. You win!")
-        # if self.choose_team == 1:
-        #     print("Rawr! The herd of Dinosaurs has defeated the fleet of Robots. You lose.")
-        # print('Test. Display winner message not working')
-
