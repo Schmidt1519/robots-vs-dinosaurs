@@ -1,3 +1,6 @@
-# robots-vs-dinosaurs
+# Robots vs Dinosaurs
+First project using the concepts of OOP resulting in a console game where robots and dinosaurs fight.
 
-devCodeCamp project - Console application that will have robots and dinosaurs fight in a battle using the concepts of OOP by creating classes and using objects (instances of those classes) to interact with each other.
+## Technologies
+* Python
+
